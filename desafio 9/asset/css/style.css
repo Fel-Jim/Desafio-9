@@ -1,0 +1,167 @@
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "section"
+        "main"
+        "pagination"
+        "footer";
+}
+
+header {
+    display: flex;
+    grid-area: header;
+    justify-content: space-between;
+    background-color: #2B466D;
+    color: white;
+    font-size: 3vh;
+    height: 9vh;
+}
+
+.rigth-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.rigth-logo i {
+    margin: 20px;
+}
+
+.rigth-logo p {
+    margin-top: 10px;
+}
+
+.burger-icon {
+    margin: 20px;
+}
+
+.burger-icon {
+    display: flex;
+    justify-content: end;
+}
+
+
+section {
+    display: grid;
+    grid-area: section;
+    background-color: #B6C0CF;
+    font-size: 3vh;
+    ;
+    color: black;
+    justify-content: center;
+    height: 13vh;
+}
+
+.title-price {
+    width: 30vh;
+}
+
+.title-price select {
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: main;
+    background-color: white;
+    justify-content: center;
+
+}
+
+.product {
+    border: solid grey;
+    margin: 3vh;
+}
+
+.product img {
+    margin: 0vh;
+    border: 0vh
+}
+
+.product h3 {
+    display: flex;
+    justify-content: center;
+}
+
+.button-buy {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2vh;
+}
+
+.pagination menu {
+    grid-area: pagination;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+footer {
+    display: grid;
+    grid-area: footer;
+    background-color: blue;
+    color: white;
+    font-size: 3vh;
+    height: 9vh;
+}
+
+.icon-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.icon-footer i {
+    margin: 1vh;
+    margin-bottom: 0%;
+}
+
+.text-footer {
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 576px) {
+    .grid-container {
+        grid-template-columns: 1fr 80%;
+        grid-template-areas:
+            "header section"
+            "header main"
+            "footer pagination";
+
+    }
+
+    header {
+        display: grid;
+        height: 100%;
+        align-content: start;
+    }
+
+    .rigth-options {
+        margin-top: 5vh;
+    }
+
+    .rigth-options p {
+        display: flex;
+        justify-content: center;
+    }
+
+    .burger-icon {
+        display: none;
+    }
+
+
+    .title-price select {
+        width: 50vh;
+
+    }
+
+    .product-section {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+}
